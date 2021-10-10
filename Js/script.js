@@ -10,12 +10,29 @@ privat: false
 
 };
 
-const a = prompt('Last movie', ''),
-      b = prompt('rate', ''),
-      c = prompt('Last movie', ''),
-      d = prompt('rate', '');
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Last movie', ''),
+          b = prompt('rate', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+    
+} 
+
+if (personalMovieDB.count < 10) {
+    console.log('not enogh movies');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('u a tipical viewer');
+} else if (personalMovieDB.count >= 30) {
+    console.log('u a maniac');
+} else {
+    console.log('ooops');
+} 
+
 
 console.log(personalMovieDB);
