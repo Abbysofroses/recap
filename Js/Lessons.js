@@ -1,24 +1,7 @@
-let num = 50;
-
-/* while (num <= 55) {
-    console.log(num);
-    num++;
-} */
-
-/* do {
-    console.log(num);
-    num++;
+function calc (a, b) {
+    return (a + b);
 }
 
-while (num <55); */
-
-for (let i = 1; i < 10; i++) {
-    if (i === 6) {
-        /* break; */
-        continue;
-    }
-    
-    
-    console.log(i);
-    
-}
+console.log(calc(4, 3));
+console.log(calc(100, 1000));
+console.log(calc(24, 7));
