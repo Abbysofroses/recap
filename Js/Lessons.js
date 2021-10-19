@@ -1,7 +1,19 @@
-function calc (a, b) {
-    return (a + b);
-}
+const options = {
+    name: 'bruce',
+    Width: 2000,
+    height: 3000,
+    colors: {
+        first: 'black',
+        second: 'red',
+        third: 'gray'
+    }
+};
 
-console.log(calc(4, 3));
-console.log(calc(100, 1000));
-console.log(calc(24, 7));
+for (let key in options) {
+    if (typeof(options[key]) === 'object') {
+        for (let i in options[key]) {
+            console.log(`option ${i} has value ${options[key] [i]}`);
+        }
+    } else {console.log(`option ${key} has value ${options[key]}`);
+        }
+}
